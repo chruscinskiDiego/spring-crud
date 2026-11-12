@@ -1,17 +1,40 @@
-Commercial Management Platform - Object Oriented Web Backend
+# API de gestão comercial com Spring Boot
 
-This web backend project was inspired by commercial management systems, covering crucial resources such as categories, orders, payments, products and users. The project architecture is structured according to the following components:
+Projeto de estudo de uma API REST para usuários, produtos, categorias e pedidos, com relacionamentos entre entidades e persistência em H2.
 
-Application <-> Resource Layer -> Service Layer -> Data Access Layer
+## Recursos
 
-Technologies Employed:
+- Consulta e manutenção de usuários e produtos.
+- Consulta de categorias e pedidos.
+- Modelagem de itens de pedido, pagamentos e status.
+- Tratamento de exceções com respostas HTTP.
 
-Spring Boot: Framework used for simplicity in development and configuration.
+## Tecnologias
 
-JPA/Hibernate: Object-relational mapping tools for manipulating data in the database.
+Java 17, Spring Boot, Spring Web, Spring Data JPA, Hibernate e H2.
 
-H2 Database: Used as a temporary database for storing data during development.
+## Executar localmente
 
-Postman: Tool used to make requests and test the API efficiently.
+```bash
+sh mvnw spring-boot:run
+```
 
-The project adopts an object-oriented approach to ensure a robust and scalable structure, which I will later use as a template in other similar projects. Furthermore, it implements exception handling to deal with situations such as non-existent registration IDs, providing a more controlled and informative experience for the user.
+Confira src/main/resources/application.properties e application-test.properties para o perfil ativo e os parâmetros do banco. Os dados do ambiente de estudo são configurados em TestConfig.
+
+## Testes
+
+```bash
+sh mvnw test
+```
+
+## Organização
+
+- `resources/`: interface REST.
+- `services/`: operações e exceções.
+- `repositories/`: acesso a dados.
+- `entities/`: domínio e relacionamentos.
+- `config/`: configuração de dados do ambiente de teste.
+
+## Escopo
+
+Projeto de aprendizado de APIs e modelagem relacional. Não inclui checkout financeiro, processamento real de pagamentos ou requisitos completos de uma plataforma comercial em produção.
