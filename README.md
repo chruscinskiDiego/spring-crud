@@ -1,40 +1,40 @@
-# API de gestão comercial com Spring Boot
+# Commercial management API with Spring Boot
 
-Projeto de estudo de uma API REST para usuários, produtos, categorias e pedidos, com relacionamentos entre entidades e persistência em H2.
+REST API study project for users, products, categories and orders, with entity relationships and H2 persistence.
 
-## Recursos
+## Features
 
-- Consulta e manutenção de usuários e produtos.
-- Consulta de categorias e pedidos.
-- Modelagem de itens de pedido, pagamentos e status.
-- Tratamento de exceções com respostas HTTP.
+- User and product queries and management.
+- Category and order queries.
+- Models for order items, payments and order status.
+- Exception handling with HTTP responses.
 
-## Tecnologias
+## Technologies
 
-Java 17, Spring Boot, Spring Web, Spring Data JPA, Hibernate e H2.
+Java 17, Spring Boot, Spring Web, Spring Data JPA, Hibernate and H2.
 
-## Executar localmente
+## Run locally
 
 ```bash
 sh mvnw spring-boot:run
 ```
 
-Confira src/main/resources/application.properties e application-test.properties para o perfil ativo e os parâmetros do banco. Os dados do ambiente de estudo são configurados em TestConfig.
+Check src/main/resources/application.properties and application-test.properties for the active profile and database settings. Study-environment data is configured in TestConfig.
 
-## Testes
+## Tests
 
 ```bash
 sh mvnw test
 ```
 
-## Organização
+## Structure
 
-- `resources/`: interface REST.
-- `services/`: operações e exceções.
-- `repositories/`: acesso a dados.
-- `entities/`: domínio e relacionamentos.
-- `config/`: configuração de dados do ambiente de teste.
+- `resources/`: REST interface.
+- `services/`: operations and exceptions.
+- `repositories/`: data access.
+- `entities/`: domain and relationships.
+- `config/`: test-environment data configuration.
 
-## Escopo
+## Scope
 
-Projeto de aprendizado de APIs e modelagem relacional. Não inclui checkout financeiro, processamento real de pagamentos ou requisitos completos de uma plataforma comercial em produção.
+A learning project covering APIs and relational modeling. It does not include financial checkout, real payment processing or all requirements of a production commercial platform.
